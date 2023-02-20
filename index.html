@@ -6,25 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + TS</title>
     <script
-      src="https://kit.fontawesome.com/e3e2208581.js"
-      crossorigin="anonymous"
+      defer
+      src="node_modules/@fortawesome/fontawesome-free/js/solid.js"
     ></script>
-    <script type="module" crossorigin src="./assets/index-b7213a64.js"></script>
-    <link rel="stylesheet" href="./assets/index-864c0e55.css" />
+    <script
+      defer
+      src="node_modules/@fortawesome/fontawesome-free/js/fontawesome.js"
+    ></script>
+    <script type="module" crossorigin src="./assets/index-a2be4f1d.js"></script>
+    <link rel="stylesheet" href="./assets/index-b7d1a04e.css">
   </head>
   <body>
     <div id="map"></div>
-    <div>
-      <a><i class="fa-solid fa-sliders-up"></i></a>
+    <div class="log-control">
+      <a id="loggerButton"><i class="fa-solid fa-gear fa-lg"></i></a>
     </div>
-    <div id="info">
-      <ul>
-        <li>velocity: <code id="velocity"></code></li>
-        <li>bearing: <code id="bearing"></code></li>
-        <li>rotation: <code id="rotation"></code></li>
-        <li>Geoloc API speed: <code id="speed"></code></li>
-        <li>Geoloc API heading: <code id="heading"></code></li>
-      </ul>
+    <div id="logger" class="overlay">
+      <div class="sticky">
+        <a href="javascript:void(0)" class="closebtn" id="loggerCloseButton"
+          >&times;</a
+        >
+      </div>
+      <div class="overlay-content">
+        <div id="logConsole"></div>
+      </div>
     </div>
+
+    
   </body>
 </html>
